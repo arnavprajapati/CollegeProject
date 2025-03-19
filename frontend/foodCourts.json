@@ -1,0 +1,79 @@
+{
+    "foodCourts": [
+        {
+            "id": 1,
+            "name": "Main Gate Food Court",
+            "location": "Near Main Entrance",
+            "rating": 4.5,
+            "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+            "tags": [
+                "North Indian",
+                "Chinese",
+                "Fast Food"
+            ],
+            "description": "The most popular food court featuring diverse cuisines, spacious seating, and student-friendly prices.",
+            "timing": "8 AM - 10 PM",
+            "status": "Open Now"
+        },
+        {
+            "id": 2,
+            "name": "BH4 Food Court",
+            "location": "Boys Hostel Complex",
+            "rating": 4.3,
+            "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+            "tags": [
+                "South Indian",
+                "Snacks",
+                "Beverages"
+            ],
+            "description": "Known for authentic South Indian cuisine and late-night snacks. Popular among hostel residents.",
+            "timing": "7 AM - 11 PM",
+            "status": "Open Now"
+        },
+        {
+            "id": 3,
+            "name": "BH1 Food Court",
+            "location": "First Year Block",
+            "rating": 4.7,
+            "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+            "tags": [
+                "Multi Cuisine",
+                "Cafe",
+                "Ice Cream"
+            ],
+            "description": "Modern cafe-style food court with fresh brews, pastries, and international cuisine options.",
+            "timing": "9 AM - 9 PM",
+            "status": "Open Now"
+        },
+        {
+            "id": 4,
+            "name": "Science Block Food Court",
+            "location": "Near Labs",
+            "rating": 4.4,
+            "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+            "tags": [
+                "Quick Bites",
+                "Healthy",
+                "Snacks"
+            ],
+            "description": "Perfect for quick meals between classes, offering healthy options and fresh snacks.",
+            "timing": "8 AM - 8 PM",
+            "status": "Open Now"
+        },
+        {
+            "id": 5,
+            "name": "Library Food Court",
+            "location": "Study Area",
+            "rating": 4.6,
+            "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+            "tags": [
+                "Study Food",
+                "Coffee",
+                "Snacks"
+            ],
+            "description": "Quiet atmosphere perfect for study breaks, serving coffee, snacks, and light meals.",
+            "timing": "8 AM - 10 PM",
+            "status": "Open Now"
+        }
+    ]
+}
