@@ -11,83 +11,481 @@
     <link rel="icon" type="image/svg+xml" href="/frontend/images/favicon/restaurant-2-fill.svg">
     <link href="https://fonts.googleapis.com/css?family=Merienda:300,regular,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Varela:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: American Typewriter;
+            src: url('/frontend/font/American\ Typewriter\ Regular.ttf');
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 20% 70% 10%;
+            grid-template-rows: 100%;
+        }
+
+        .left-section {
+            width: 100%;
+            height: 100%;
+            background-color: #60A5FA;
+            position: relative;
+        }
+
+        .slider-card {
+            width: 370px;
+            height: 75%;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translateY(-50%);
+            border-radius: 24px;
+            display: grid;
+            grid-template-rows: 20% 60% 20%;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide-number {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: #9CA3AF;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .arrow-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .arrow-btn {
+            height: 40%;
+            cursor: pointer;
+        }
+
+        .content-section {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-wrapper {
+            width: 60%;
+            height: 40%;
+            margin-left: 30%;
+            margin-top: 18%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .title {
+            font-family: 'American Typewriter', sans-serif;
+            font-size: 50px;
+            font-weight: 900;
+        }
+        .title p{
+            margin-top: -14px;
+            /* letter-spacing: 1px; */
+        }
+
+        .description {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1.125rem;
+            margin-bottom: 25px;
+        }
+
+        .explore-btn {
+            background-color: #60A5FA;
+            padding: 0.75rem 2.25rem;
+            color: white;
+            font-size: 1.25rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .right-section {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 15% 75% 10%;
+        }
+
+        .menu-icon {
+            display: grid;
+            place-items: center;
+            font-size: 3rem;
+        }
+
+        .vertical-text {
+            display: grid;
+            place-items: center;
+            font-size: 1.25rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            padding: 2rem;
+        }
+
+        .slide-image {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            transition: transform 0.5s ease-in-out;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .slide-image.active {
+            opacity: 1;
+        }
+
+        .slide-image.next {
+            transform: translate(100%, -50%);
+        }
+
+        .slide-image.prev {
+            transform: translate(-200%, -50%);
+        }
+
+        .btn {
+            display: flex;
+            gap: 35px;
+        }
+
+        #btn2 {
+            background-color: black;
+            color: white;
+        }
+
+        .part-2 {
+            width: 100%;
+            height: 160vh;
+        }
+
+        .about {
+            width: 100%;
+            height: 70vh;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin-bottom: 5%;
+
+        }
+
+        .explore {
+            width: 100%;
+            height: 70vh;
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+        }
+
+        .explore {
+            width: 100%;
+            height: 70vh;
+        }
+
+        .abt-img {
+            display: flex;
+            justify-content: end;
+        }
+
+        .abt-img img {
+            width: 100%;
+        }
+
+        .explore-btn {
+            background-color: black;
+            padding: 0.75rem 2.25rem;
+            color: white;
+            font-size: 1.25rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .abt-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 70%;
+            height: 80%;
+            margin-left: 10%;
+            margin-top: 14%;
+            text-align: justify;
+        }
+
+        .exp-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 70%;
+            height: 80%;
+            margin-right: 15%;
+            margin-left: 20%;
+            margin-top: 3%;
+            text-align: end;
+            justify-content: flex-end;
+        }
+
+        .exp-content .para {
+            text-align: justify;
+            margin-bottom: 25px;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+        }
+
+        .exp-content .heading {
+            text-align: right;
+        }
+
+        .head {
+            margin-bottom: -10px;
+        }
+
+        .heading {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 700;
+            font-size: xx-large;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .exp-heading {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 700;
+            font-size: xx-large;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .para {
+            margin-bottom: 25px;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+        }
+
+        .dash::before {
+            content: "";
+            position: absolute;
+            left: 190px;
+            top: 60px;
+            width: 200px;
+            height: 3px;
+            background-color: #60A5FA;
+            display: block;
+        }
+
+        .exp-dash::before {
+            content: "";
+            position: absolute;
+            left: 190px;
+            top: 60px;
+            width: 200px;
+            height: 3px;
+            background-color: #60A5FA;
+            display: block;
+        }
+
+        #btn1 {
+            background-color: #60A5FA;
+        }
+
+        #btn1:hover {
+            background-color: white;
+            border: solid #60A5FA;
+            color: #60A5FA;
+        }
+
+        #btn2:hover {
+            border: solid black;
+            background-color: white;
+            color: black;
+        }
+
+
+
+        @media (max-width:600px) {
+            .container {
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                min-height: 55vh;
+                position: relative;
+            }
+
+            .left-section {
+                width: 100%;
+                min-height: 55vh;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 60px;
+            }
+
+            .slider-card {
+                position: absolute;
+                height: 70vh;
+                top: 30%;
+                left: 50%;
+                height: 70vh;
+                width: 90%;
+                transform: translateX(-50%);
+                transform: translateZ(-50%);
+            }
+
+            .content-section {
+                margin-top: 80%;
+                height: 65vh;
+            }
+
+            .content-wrapper {
+                width: fit-content;
+                height: 100%;
+                margin-left: 0;
+                margin-top: 0;
+                display: flex;
+                /* row-gap: 30px; */
+            }
+
+            .title {
+                width: 100%;
+                text-align: center;
+                font-size: 15vw;
+            }
+
+            .description {
+                width: 90%;
+                text-align: center;
+                margin-left: 30px;
+                text-align: center;
+                font-size: medium;
+            }
+            .abt-img{
+                padding-bottom: 10%;
+            }
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            #btn1 {
+                background-color: #60A5FA;
+            }
+
+            #btn2 {
+                color: white;
+                background-color: black;
+                padding: 12px 44px;
+            }
+
+
+            .vertical-text {
+                display: none;
+            }
+
+            .menu-icon {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                color: white;
+            }
+
+            .part-2 {
+                width: fit-content;
+                margin-top: 120%;
+            }
+
+            .dash::before {
+                left: 120px;
+                width: 60%;
+            }
+
+
+
+            .about {
+                width: 100%;
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+                gap: 70px;
+            }
+
+            .heading {
+                margin-left: 8%;
+                text-align: start;
+            }
+
+            .para {
+                margin-left: 8%;
+            }
+
+            .explore-btn {
+                margin-left: 8%;
+            }
+
+            .explore {
+                margin-top: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            .exp-heading {
+                margin-top: 20%;
+                text-align: end;
+            }
+
+            .abt-content {
+                margin: 0;
+                width: 90%;
+            }
+
+            .exp-content {
+                margin: 0;
+                width: 90%;
+                margin-top: 14%;
+            }
+
+            .explore-btn {
+                margin-bottom: 5%;
+            }
+
+            .exp-dash::before {
+                left: 30px;
+                top: 80px;
+            }
+
+        }
+    </style>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <i class="ri-restaurant-2-fill" aria-hidden="true"></i>
-                <span class="logos">Campus Cuisine</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#"><i class="ri-home-2-fill"></i> Home</a></li>
-                <li class="dropdown">
-                    <a href="#">
-                        <i class="ri-building-2-fill"></i> Food Courts
-                        <i class="ri-arrow-down-s-line dropdown-icon"></i>
-                    </a>
-                    <div class="dropdown-content">
-                        <div class="column">
-                            <a href="#">Main Gate</a>
-                            <a href="#">Near BH4</a>
-                            <a href="#">Near BH1</a>
-                        </div>
-                        <div class="column">
-                            <a href="#">Near BH3</a>
-                            <a href="#">Near BH6</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="#"><i class="ri-fire-fill"></i> Popular Dishes</a></li>
-                </li>
-                <li><a href="#"><i class="ri-star-half-fill"></i> Ratings</a></li>
-                <li><a href="#"><i class="ri-mail-fill"></i> Contact</a></li>
-            </ul>
-            <div class="mobile-menu">
-                <i class="ri-menu-line"></i>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="welcome-section">
-            <h1>Welcome to Campus Cuisine Discovery</h1>
-            <p>Your ultimate guide to exploring delicious food options across campus</p>
-        </section>
-
-        <section class="content-section">
-            <div class="food-courts">
-                <h2>Discover Food Courts</h2>
-                <p>Explore 5 unique food courts across campus, each offering diverse dining experiences<br><br></p>
-                <ul>
-                    <li> Central Food Court - The heart of campus dining</li>
-                    <li> Science Block - Quick bites near labs</li>
-                    <li> Arts Block - Creative cuisine</li>
-                    <li> Sports Complex - Healthy options</li>
-                    <li> Library - Study-friendly atmosphere</li>
-                </ul>
-            </div>
-
-            <div class="features">
-                <h2>Features</h2>
-                <p>Everything you need to make informed dining choices<br><br></p>
-                <ul>
-                    <li> Browse multiple canteens and food items</li>
-                    <li> Read and write detailed reviews</li>
-                    <li> Check ratings and prices</li>
-                    <li> Compare dishes across different canteens</li>
-                    <li> Find the best version of your favorite dish</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <a href="explore.html">
-                <button class="cta-button">Start Exploring</button>
-            </a>
-        </section>
-    </main>
+    <img src="" alt="">
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,68 +1,124 @@
-function createFoodCourtCard(foodCourt) {
-    return `
-
-        <div class="w-full min-w-[450px] bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <!-- Image Section -->
-            <div class="relative h-[150px] overflow-hidden">
-                <img src="${foodCourt.image}" alt="${foodCourt.name}"
-                    class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110">
-                <div class="absolute top-3 right-3 bg-white px-3 py-1 rounded-full text-sm font-medium shadow-md">
-                    ${foodCourt.status}
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.innerHTML = `
+        <div class="container">
+            <div class="left-section">
+                <div class="slider-card">
+                    <div class="slide-number">1</div>
+                    <div class="image-container">
+                        <img src="/frontend/images/homePage/slider-img.png" alt="" class="slide-image">
+                        <img src="/frontend/images/homePage/hot-3.png" alt="" class="slide-image">
+                        <img src="/frontend/images/homePage/hot-1.png" alt="" class="slide-image">
+                        <img src="/frontend/images/homePage/hot-2.png" alt="" class="slide-image">
+                    </div>
+                    <div class="arrow-container">
+                        <img src="/frontend/images/homePage/arrow-left-long-line.svg" alt="" class="arrow-btn prev-btn">
+                        <img src="/frontend/images/homePage/arrow-right-long-line.svg" alt="" class="arrow-btn next-btn">
+                    </div>
                 </div>
             </div>
 
-            <div class="p-5">
-                <div class="flex justify-between items-start mb-4">
+            <div class="content-section">
+                <div class="content-wrapper">
+                    <div class="title">
+                        <p>CAMPUS</p>
+                        <p>CUISINE</p>
+                    </div>
+                    <div class="description">
+                        <p>There are many variations of passages of Lorem Ipsum available, but
+                            the majority have suffered alteration in some form, by injected humour, or randomised words</p>
+                    </div>
+                    <div class="btn">
+                        <a class="explore-btn" id="btn1" href="explore.html">Explore Now</a>
+                        <a class="explore-btn" id="btn2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="menu-icon">
+                    <i class="ri-menu-line"></i>
+                </div>
+                <div class="vertical-text">
+                    ${['C', 'A', 'M', 'P', 'U', 'S', '', 'C', 'U', 'I', 'S', 'I', 'N', 'E']
+            .map(letter => `<div>${letter}</div>`).join('')}
+                </div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="part-2">
+            <div class="about">
+                <div class="abt-content">
+                    <div class="heading">
+                        <div class="head">Explore</div>
+                        <div class="head">Our</div>
+                        <div class="head">Dishes</div>
+                        <div class="dash"></div>
+                    </div>
+                    <div class="para">
+                        <p>From spicy North Indian curries to tangy South Indian dosas, crispy Chinese noodles to cheesy
+                            pizzas, our college food courts have something for everyone! Whether you're craving a quick
+                            snack between classes our diverse menu options are prepared fresh daily to satisfy your taste
+                            buds. Check out reviews from fellow students to find the best dishes on campus!</p>
+                    </div>
                     <div>
-                        <h2 class="text-lg font-bold text-gray-800 mb-2">${foodCourt.name}</h2>
-                        <div class="flex items-center text-gray-600 text-sm">
-                            <i class="ri-map-pin-line mr-2"></i>
-                            <span>${foodCourt.location}</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center bg-yellow-400 px-3 py-1 rounded-full">
-                        <i class="ri-star-fill text-white text-sm mr-1"></i>
-                        <span class="text-white text-sm font-semibold">${foodCourt.rating}</span>
+                        <a class="explore-btn" id="btn1">Read More</a>
                     </div>
                 </div>
-
-                <div class="flex flex-wrap gap-2 mb-3">
-                    ${foodCourt.tags.map(tag => `
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">${tag}</span>
-                    `).join('')}
+                <div class="abt-img">
+                    <img src="/frontend/images/homePage/about-img.jpg" alt="">
                 </div>
-
-                <!-- Description -->
-                <p class="text-gray-600 text-sm mb-4 line-clamp-3">
-                    ${foodCourt.description}
-                </p>
-
-                <div class="flex justify-between items-center pt-3 border-t border-gray-100">
-                    <div class="flex items-center text-gray-600 text-sm">
-                        <i class="ri-time-line mr-2"></i>
-                        <span>${foodCourt.timing}</span>
+            </div>
+            <div class="explore">
+                <div class="abt-img">
+                    <img src="/frontend/images/homePage/pexels-ella-olsson-572949-1640777.jpg" alt="">
+                </div>
+                <div class="exp-content">
+                    <div class="exp-heading">
+                        <div class="head">About</div> 
+                        <div class="head">Our</div>
+                        <div class="head">Food</div>
+                        <div class="head">Courts</div>
+                        <div class="exp-dash"></div>
                     </div>
-                    <button class="bg-blue-600 text-white px-3 py-1.5 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center text-sm">
-                        <i class="ri-map-pin-line mr-2"></i>
-                        Directions
-                    </button>
+                    <div class="para">
+                        <p>At LPU, our food courts are the heart of campus dining, offering a variety of cuisines to suit every palate. With our new Food Court Review System, you can share your feedback, rate your favorite dishes, and help us improve the dining experience for everyone. Join the community, leave a review, and let’s make campus dining even better!</p>
+                    </div>
+                    <div>
+                        <a class="explore-btn" id="btn1">Read More</a>
+                    </div>
                 </div>
             </div>
         </div>
     `;
-}
 
-function loadFoodCourts() {
-    fetch('foodCourts.json')
-        .then(response => response.json())
-        .then(data => {
-            const cardsContainer = document.querySelector('.grid');
-            cardsContainer.innerHTML = data.foodCourts.map((foodCourt) => createFoodCourtCard(foodCourt)).join('');
-        })
-        .catch(error => {
-            console.error('Error loading food courts:', error);
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-image');
+    const slideNumber = document.querySelector('.slide-number');
+
+    function showSlide(n) {
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active', 'next', 'prev');
+            if (index === n) {
+                slide.classList.add('active');
+            } else if (index > n) {
+                slide.classList.add('next');
+            } else {
+                slide.classList.add('prev');
+            }
         });
-}
+        slideNumber.textContent = n + 1;
+    }
 
-// document.addEventListener('DOMContentLoaded', loadFoodCourts);
-console.log(loadFoodCourts())
+    showSlide(currentSlide);
+
+    document.querySelector('.next-btn').addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    });
+
+    document.querySelector('.prev-btn').addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    });
+});
