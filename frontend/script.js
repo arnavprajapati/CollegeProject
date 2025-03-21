@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slider-card">
                     <div class="slide-number">1</div>
                     <div class="image-container">
-                        <img src="/frontend/images/homePage/slider-img.png" alt="" class="slide-image">
+                        <img src="/CollegeProject/frontend/images/homePage/slider-img.png" alt="" class="slide-image">
                         <img src="/frontend/images/homePage/hot-3.png" alt="" class="slide-image">
                         <img src="/frontend/images/homePage/hot-1.png" alt="" class="slide-image">
                         <img src="/frontend/images/homePage/hot-2.png" alt="" class="slide-image">
