@@ -66,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="abt-img">
-                    <img src="/images/homePage/about-img.jpg" alt="">
+                    <img src="./images/homePage/about-img.jpg" alt="">
                 </div>
             </div>
             <div class="explore">
                 <div class="abt-img">
-                    <img src="/images/homePage/pexels-ella-olsson-572949-1640777.jpg" alt="">
+                    <img src="./images/homePage/pexels-ella-olsson-572949-1640777.jpg" alt="">
                 </div>
                 <div class="exp-content">
                     <div class="exp-heading">
