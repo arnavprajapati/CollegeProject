@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="slide-number">1</div>
                     <div class="image-container">
                         <img src="/CollegeProject/images/homePage/slider-img.png" alt="" class="slide-image">
-                        <img src="images/homePage/hot-3.png" alt="" class="slide-image">
-                        <img src="images/homePage/hot-1.png" alt="" class="slide-image">
-                        <img src="images/homePage/hot-2.png" alt="" class="slide-image">
+                        <img src="./images/homePage/hot-3.png" alt="" class="slide-image">
+                        <img src="./images/homePage/hot-1.png" alt="" class="slide-image">
+                        <img src="./images/homePage/hot-2.png" alt="" class="slide-image">
                     </div>
                     <div class="arrow-container">
-                        <img src="images/homePage/arrow-left-long-line.svg" alt="" class="arrow-btn prev-btn">
-                        <img src="images/homePage/arrow-right-long-line.svg" alt="" class="arrow-btn next-btn">
+                        <img src="./images/homePage/arrow-left-long-line.svg" alt="" class="arrow-btn prev-btn">
+                        <img src="./images/homePage/arrow-right-long-line.svg" alt="" class="arrow-btn next-btn">
                     </div>
                 </div>
             </div>
