@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="images/homePage/hot-2.png" alt="" class="slide-image">
                     </div>
                     <div class="arrow-container">
-                        <img src="/images/homePage/arrow-left-long-line.svg" alt="" class="arrow-btn prev-btn">
-                        <img src="/images/homePage/arrow-right-long-line.svg" alt="" class="arrow-btn next-btn">
+                        <img src="images/homePage/arrow-left-long-line.svg" alt="" class="arrow-btn prev-btn">
+                        <img src="images/homePage/arrow-right-long-line.svg" alt="" class="arrow-btn next-btn">
                     </div>
                 </div>
             </div>
