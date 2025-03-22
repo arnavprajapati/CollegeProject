@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="slider-card">
                     <div class="slide-number">1</div>
                     <div class="image-container">
-                        <img src="/CollegeProject/frontend/images/homePage/slider-img.png" alt="" class="slide-image">
-                        <img src="/frontend/images/homePage/hot-3.png" alt="" class="slide-image">
-                        <img src="/frontend/images/homePage/hot-1.png" alt="" class="slide-image">
-                        <img src="/frontend/images/homePage/hot-2.png" alt="" class="slide-image">
+                        <img src="/CollegeProject/images/homePage/slider-img.png" alt="" class="slide-image">
+                        <img src="/images/homePage/hot-3.png" alt="" class="slide-image">
+                        <img src="/images/homePage/hot-1.png" alt="" class="slide-image">
+                        <img src="/images/homePage/hot-2.png" alt="" class="slide-image">
                     </div>
                     <div class="arrow-container">
-                        <img src="/frontend/images/homePage/arrow-left-long-line.svg" alt="" class="arrow-btn prev-btn">
-                        <img src="/frontend/images/homePage/arrow-right-long-line.svg" alt="" class="arrow-btn next-btn">
+                        <img src="/images/homePage/arrow-left-long-line.svg" alt="" class="arrow-btn prev-btn">
+                        <img src="/images/homePage/arrow-right-long-line.svg" alt="" class="arrow-btn next-btn">
                     </div>
                 </div>
             </div>
@@ -66,12 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="abt-img">
-                    <img src="/frontend/images/homePage/about-img.jpg" alt="">
+                    <img src="/images/homePage/about-img.jpg" alt="">
                 </div>
             </div>
             <div class="explore">
                 <div class="abt-img">
-                    <img src="/frontend/images/homePage/pexels-ella-olsson-572949-1640777.jpg" alt="">
+                    <img src="/images/homePage/pexels-ella-olsson-572949-1640777.jpg" alt="">
                 </div>
                 <div class="exp-content">
                     <div class="exp-heading">
