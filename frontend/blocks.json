@@ -1,0 +1,52 @@
+{
+    "universityBlocks": [
+      {
+        "name": "Block 34",
+        "description": "Main Academic Area",
+        "foodCourts": 4,
+        "capacity": "High Capacity",
+        "gradientClass": "gradient-purple-blue",
+        "icon": "ri-building-2-line"
+      },
+      {
+        "name": "Block 32",
+        "description": "Engineering Complex",
+        "foodCourts": 3,
+        "capacity": "Medium Capacity",
+        "gradientClass": "gradient-blue-cyan",
+        "icon": "ri-building-4-line"
+      },
+      {
+        "name": "Uni Mall",
+        "description": "Shopping Complex",
+        "foodCourts": 6,
+        "capacity": "Very High Capacity",
+        "gradientClass": "gradient-indigo-purple",
+        "icon": "ri-store-2-line"
+      },
+      {
+        "name": "Block 38",
+        "description": "Design Block",
+        "foodCourts": 2,
+        "capacity": "Medium Capacity",
+        "gradientClass": "gradient-pink-rose",
+        "icon": "ri-paint-brush-line"
+      },
+      {
+        "name": "CSE Block",
+        "description": "Computer Science",
+        "foodCourts": 3,
+        "capacity": "High Capacity",
+        "gradientClass": "gradient-cyan-blue",
+        "icon": "ri-computer-line"
+      },
+      {
+        "name": "Block 1",
+        "description": "Management Block",
+        "foodCourts": 4,
+        "capacity": "High Capacity",
+        "gradientClass": "gradient-amber-orange",
+        "icon": "ri-bank-line"
+      }
+    ]
+  }

@@ -1,54 +1,3 @@
-const universityBlocks = [
-    {
-        name: "Block 34",
-        description: "Main Academic Area",
-        foodCourts: 4,
-        capacity: "High Capacity",
-        gradientClass: "gradient-purple-blue",
-        icon: "ri-building-2-line"
-    },
-    {
-        name: "Block 32",
-        description: "Engineering Complex",
-        foodCourts: 3,
-        capacity: "Medium Capacity",
-        gradientClass: "gradient-blue-cyan",
-        icon: "ri-building-4-line"
-    },
-    {
-        name: "Uni Mall",
-        description: "Shopping Complex",
-        foodCourts: 6,
-        capacity: "Very High Capacity",
-        gradientClass: "gradient-indigo-purple",
-        icon: "ri-store-2-line"
-    },
-    {
-        name: "Block 38",
-        description: "Design Block",
-        foodCourts: 2,
-        capacity: "Medium Capacity",
-        gradientClass: "gradient-pink-rose",
-        icon: "ri-paint-brush-line"
-    },
-    {
-        name: "CSE Block",
-        description: "Computer Science",
-        foodCourts: 3,
-        capacity: "High Capacity",
-        gradientClass: "gradient-cyan-blue",
-        icon: "ri-computer-line"
-    },
-    {
-        name: "Block 1",
-        description: "Management Block",
-        foodCourts: 4,
-        capacity: "High Capacity",
-        gradientClass: "gradient-amber-orange",
-        icon: "ri-bank-line"
-    }
-];
-
 function createBlockCard(block) {
     return `
         <div class="block-card ${block.gradientClass}">
@@ -77,12 +26,134 @@ function createBlockCard(block) {
     `;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const blocksSection = document.getElementById('blocks-section');
-    blocksSection.innerHTML = `
-        <h2 class="blocks-title">Blocks & Areas</h2>
-        <div class="blocks-grid">
-            ${universityBlocks.map(block => createBlockCard(block)).join('')}
+function toggleProfile(){
+    const profile = document.querySelector('.profile-view');
+    profile.classList.toggle('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const root = document.getElementById('root');
+    
+    const structure = `
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="spaces"></div>
+            <div class="profile" onclick="toggleProfile()">
+                <img src="boy.png" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <div class="top-navigation">
+                    <div class="navigation">
+                        <div class="nav-section">
+                            <div class="section">
+                                <h2>Navigation</h2>
+                                <div class="info">
+                                    <div class="nav-item">
+                                        <i class="ri-building-2-fill"></i>
+                                        <p>Blocks & Areas</p>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="ri-store-2-line"></i>
+                                        <p>Food Courts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-section">
+                            <div class="section">
+                                <h2>Quick Filters</h2>
+                                <div class="info">
+                                    <div class="nav-item">
+                                        <i class="ri-fire-fill"></i>
+                                        <p>Popular Now</p>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="ri-star-s-fill"></i>
+                                        <p>Top Rated</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-section">
+                            <div class="section">
+                                <h2>Food Type</h2>
+                                <div class="info">
+                                    <div class="nav-item">
+                                        <i class="ri-time-fill"></i>
+                                        <p>North Indian</p>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="ri-time-fill"></i>
+                                        <p>South Indian</p>
+                                    </div>
+                                    <div class="nav-item">
+                                        <i class="ri-time-fill"></i>
+                                        <p>Chinese</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto max-w-7xl">
+                <div id="blocks-section">
+                </div>
+            </div>
         </div>
     `;
+    
+    root.innerHTML = structure;
+
+    fetch('blocks.json')
+        .then(response => response.json())
+        .then(data => {
+            const blocksSection = document.getElementById('blocks-section');
+            blocksSection.innerHTML = `
+                <h2 class="blocks-title">Blocks & Areas</h2>
+                <div class="blocks-grid">
+                    ${data.universityBlocks.map(block => createBlockCard(block)).join('')}
+                </div>
+            `;
+        })
+        .catch(error => {
+            console.error('Error loading blocks:', error);
+            const blocksSection = document.getElementById('blocks-section');
+            blocksSection.innerHTML = `
+                <div class="error-message">
+                    Failed to load blocks data. Please try again later.
+                </div>
+            `;
+        });
 }); 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const profileView = document.querySelector('.profile-view');
+
+    profileView.innerHTML = `
+        <div class="username">
+            <h3>Username</h3>
+            <p>student@lpu.in</p>
+        </div>
+        <div class="detail">
+            <div class="data">
+                <i class="ri-user-settings-line"></i>
+                <p>My Profile</p>
+            </div>
+            <div class="data">
+                <i class="ri-chat-1-fill"></i>
+                <p>Your Experience</p>
+            </div>
+            <div class="data">
+                <i class="ri-key-2-fill"></i>
+                <p>Change Password</p>
+            </div>
+            <div class="data logout">
+                <i class="ri-logout-box-r-line"></i>
+                <p>Logout</p>
+            </div>
+        </div>
+    `;
+})
