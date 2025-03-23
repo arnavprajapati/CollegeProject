@@ -351,3 +351,140 @@ h2 {
 .logout{
     color: red;
 }
+
+
+@media (min-width: 992px) {
+    .blocks-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blocks-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .top-navigation{
+        display: none;
+    }
+    .navigation{
+        display: none;
+    }
+    .container{
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        place-items: center;
+    }
+    .blocks-title{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: -5px;
+    }
+    .blocks-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #blocks-section{
+        justify-content: center;
+        align-items: center;
+        /* padding-left: 80px; */
+    }
+    .container{
+        margin-top: -15px;
+    }
+    .nav{
+        height: 80px;
+    }
+    .profile img{
+        width: 80%;
+    }
+    .profile{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .profile-view{
+        top: 35%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 50%;
+    }
+    .logo{
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 30px;
+        margin-top: 25px;
+    }
+}
+
+
+/* @media (max-width: 767px) {
+    .blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
+
+@media (max-width: 576px) {
+    .blocks-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .top-navigation{
+        display: none;
+    }
+    .navigation{
+        display: none;
+    }
+    .containers{
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        place-items: center;
+    }
+    .blocks-title{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: -5px;
+    }
+    .blocks-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* #blocks-section{
+        padding-left: 100px;
+    } */
+    .container{
+        margin-top: -15px;
+    }
+    .nav{
+        height: 80px;
+    }
+    .profile img{
+        width: 100%;
+    }
+    .profile{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .profile-view{
+        top: 35%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 50%;
+    }
+    .logo{
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+  }
