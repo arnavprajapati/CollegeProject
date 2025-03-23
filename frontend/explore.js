@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="logo"></div>
             <div class="spaces"></div>
             <div class="profile" onclick="toggleProfile()">
-                <img src="boy.png" alt="">
+                <img src="/frontend/images/explore/boy.png" alt="">
             </div>
         </div>
         <div class="container">
